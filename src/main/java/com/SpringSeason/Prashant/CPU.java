@@ -2,7 +2,7 @@ package com.SpringSeason.Prashant;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class CPU {
-    @Autowired //Using Constructor Injection
+    @Autowired //Using Field Injection
     Ram ram;
     // @Autowired //Using Setter Injection
     public void setRam(Ram ram) {
