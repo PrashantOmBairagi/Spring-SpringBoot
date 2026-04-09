@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Bairagi — Java Backend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #141829 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 32px;
+            padding: 4rem 3rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .highlight {
+            color: #06b6d4;
+            font-weight: 600;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: white;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #06b6d4;
+            border: 2px solid #06b6d4;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: slideUp 0.8s ease-out 0.8s both;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #06b6d4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .intro {
+                padding: 2.5rem 2rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1rem;
+            }
+
+            .description {
+                font-size: 0.95rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="intro">
+        <h1 class="name">Prashant Bairagi</h1>
+        <p class="title">3rd Year ECE | Java Backend Developer | Future CTO</p>
+
+        <p class="description">
+            Building <span class="highlight">intelligent systems</span> with Java, DSA mastery, and backend expertise.
+            On a deliberate path to ₹40-50 LPA and CTO-level technical authority.
+            <span class="highlight">Internship-ready by July 2026.</span>
+        </p>
+
+        <div class="cta-group">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://linkedin.com/in/prashant-bairagi-kmlpr/" class="social-link" title="LinkedIn">in</a>
+            <a href="https://github.com/PrashantOmBairagi" class="social-link" title="GitHub">⚙</a>
+            <a href="mailto:your-email@example.com" class="social-link" title="Email">✉</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
