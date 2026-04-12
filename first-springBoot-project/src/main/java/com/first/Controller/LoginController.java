@@ -1,6 +1,8 @@
 package com.first.Controller;
 
+import com.first.aop.LoginAspect;
 import com.first.services.LoginService;
+import com.first.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +14,13 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    @Autowired
+    private ProductService productService;
+
+
     @RequestMapping("/")
     public String loginPage(){
+        productService.createProduct();
         boolean isLogin = loginService.doLogin();
         if(isLogin){
             return "success_login";
