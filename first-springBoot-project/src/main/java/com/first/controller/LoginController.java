@@ -1,6 +1,5 @@
-package com.first.Controller;
+package com.first.controller;
 
-import com.first.aop.LoginAspect;
 import com.first.services.LoginService;
 import com.first.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

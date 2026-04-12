@@ -1,6 +1,5 @@
-package com.first.Controller;
+package com.first.controller;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
